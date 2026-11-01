@@ -1,0 +1,65 @@
+// Radiance resources: icon, manifest, version info and the scene-look thumbnails.
+#include "resource.h"
+#include <winver.h>
+#include <winuser.h>
+
+// The Radiance mark (ui::DrawMark), drawn by tools/make_icon.py.
+IDI_RADIANCE ICON "radiance.ico"
+IDI_RADIANCE_LIGHT ICON "radiance-light.ico"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "radiance.manifest"
+
+// Lexend (SIL Open Font License 1.1), the typeface of the UI source.
+FONT_LEXEND_REGULAR RCDATA "fonts/Lexend-Regular.ttf"
+FONT_LEXEND_MEDIUM RCDATA "fonts/Lexend-Medium.ttf"
+FONT_LEXEND_BOLD RCDATA "fonts/Lexend-Bold.ttf"
+
+// Scene-look thumbnails (Display page), loaded by name: LOOK_<ART>.
+LOOK_CS2_BALANCED RCDATA "looks/cs2-balanced.png"
+LOOK_CS2_CONCRETE RCDATA "looks/cs2-concrete.png"
+LOOK_CS2_DUST RCDATA "looks/cs2-dust.png"
+LOOK_CS2_SHADOWS RCDATA "looks/cs2-shadows.png"
+LOOK_CS2_VIVID RCDATA "looks/cs2-vivid.png"
+LOOK_FORTNITE_BALANCED RCDATA "looks/fortnite-balanced.png"
+LOOK_FORTNITE_DAYLIGHT RCDATA "looks/fortnite-daylight.png"
+LOOK_FORTNITE_NIGHT RCDATA "looks/fortnite-night.png"
+LOOK_FORTNITE_TOWN RCDATA "looks/fortnite-town.png"
+LOOK_FORTNITE_VIVID RCDATA "looks/fortnite-vivid.png"
+LOOK_PUBG_BALANCED RCDATA "looks/pubg-balanced.png"
+LOOK_PUBG_DESERT RCDATA "looks/pubg-desert.png"
+LOOK_PUBG_JUNGLE RCDATA "looks/pubg-jungle.png"
+LOOK_PUBG_URBAN RCDATA "looks/pubg-urban.png"
+LOOK_PUBG_VIVID RCDATA "looks/pubg-vivid.png"
+LOOK_RUST_BALANCED RCDATA "looks/rust-balanced.png"
+LOOK_RUST_BLACKHOLO RCDATA "looks/rust-blackholo.png"
+LOOK_RUST_DESERT RCDATA "looks/rust-desert.png"
+LOOK_RUST_FOREST RCDATA "looks/rust-forest.png"
+LOOK_RUST_SNOW RCDATA "looks/rust-snow.png"
+LOOK_RUST_VIVID RCDATA "looks/rust-vivid.png"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Radiance"
+            VALUE "FileDescription", "Radiance - digital vibrance, colour, resolution and monitor control"
+            VALUE "FileVersion", "1.0.0"
+            VALUE "InternalName", "Radiance"
+            VALUE "OriginalFilename", "Radiance.exe"
+            VALUE "ProductName", "Radiance"
+            VALUE "ProductVersion", "1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

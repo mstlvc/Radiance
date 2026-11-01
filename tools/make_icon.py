@@ -2,6 +2,7 @@
 # centre with eight rays, each ending in a bead, on a 20-unit grid. Supersampled, then
 # reduced, so every size is anti-aliased. Small sizes get slightly heavier strokes so the
 # rays survive at 16 px.
+#   python tools/make_icon.py res [docs]   (docs: also the README logos)
 import math
 import sys
 from PIL import Image, ImageDraw, ImageFilter
@@ -62,4 +63,9 @@ for s in SIZES:
     preview.alpha_composite(mark(s, DEEP), (x, 256 + 24 + (256 - s) // 2))
     x += s + 12
 preview.save(f'{out_dir}/preview.png')
+
+# The README's logo, one for each GitHub theme.
+if len(sys.argv) > 2:
+    mark(256, PERIWINKLE).save(f'{sys.argv[2]}/logo.png')
+    mark(256, DEEP).save(f'{sys.argv[2]}/logo-light.png')
 print('ok')

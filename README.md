@@ -1,12 +1,42 @@
-<p align="center">
-  <img src="docs/screenshots/display-radiance-dark.png" width="85%" alt="Radiance, Display page">
-</p>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo.png" />
+    <img src="docs/logo-light.png" width="80" height="80" alt="Radiance logo" />
+  </picture>
+  <h1>Radiance</h1>
+  <p><b>Digital vibrance, colour, resolution and monitor control for Windows</b></p>
+  <p>A native C++ tray app with a custom-drawn Dear ImGui interface and a fully local feature set.<br/>No accounts, no telemetry, no cloud dependencies.</p>
 
-# Radiance
+  <a href="https://github.com/DenverCoder1/readme-typing-svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1000&color=ABBDFF&center=true&vCenter=true&width=560&lines=NVIDIA+Digital+Vibrance+via+Driver;Resolution%2C+Scaling+%26+Custom+Modes;DDC%2FCI+Monitor+Control;Per-Game+Profiles+%26+Quick+Popup;Radiance+%26+macOS+Themes%2C+Dark+%26+Light;Zero+Bloat+%E2%80%A2+100%25+Local+%E2%80%A2+No+Account+Required" />
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1000&color=5868D6&center=true&vCenter=true&width=560&lines=NVIDIA+Digital+Vibrance+via+Driver;Resolution%2C+Scaling+%26+Custom+Modes;DDC%2FCI+Monitor+Control;Per-Game+Profiles+%26+Quick+Popup;Radiance+%26+macOS+Themes%2C+Dark+%26+Light;Zero+Bloat+%E2%80%A2+100%25+Local+%E2%80%A2+No+Account+Required" alt="Feature highlights" />
+    </picture>
+  </a>
 
-Digital vibrance, colour, resolution and monitor control for Windows: a small native app
-(C++, Dear ImGui, Direct3D 11) that lives in the tray, starts with Windows and puts your look
-back on whenever you play.
+  <br/><br/>
+
+  <p>
+    <a href="https://github.com/mstlvc/Radiance/releases/latest"><img src="https://img.shields.io/github/v/release/mstlvc/Radiance?color=5868d6&style=flat-square&label=Release" alt="Latest release" /></a>
+    <img src="https://img.shields.io/badge/Platform-Windows_10_%2F_11-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Platform" />
+    <img src="https://img.shields.io/badge/C%2B%2B-20-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++20" />
+    <img src="https://img.shields.io/badge/Dear_ImGui-DirectX_11-1F2335?style=flat-square" alt="Dear ImGui and DirectX 11" />
+    <img src="https://img.shields.io/badge/GPU-NVIDIA_NVAPI-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="NVIDIA NVAPI" />
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License" /></a>
+  </p>
+
+  <br/>
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/display-radiance-dark.png" />
+    <img src="docs/screenshots/display-radiance-light.png" width="750" alt="Radiance, Display page" />
+  </picture>
+
+</div>
+
+<br/>
+
+Radiance lives in the tray, starts with Windows and puts your look back on whenever you play.
 
 - **NVIDIA digital vibrance**, saturation, gamma and a full set of colour controls, applied to
   the screen rather than to a game, so nothing ever touches a game's files or memory.
@@ -18,8 +48,6 @@ back on whenever you play.
   game opens and put back when it closes.
 - **Shortcuts**: a quick colour popup over any game, and screenshots with your colours in them.
 - **Two themes, each dark or light.**
-
-No accounts, no sign-in, no network: everything stays on your PC.
 
 ## Screenshots
 
@@ -111,7 +139,12 @@ Radiance ships with Chris Titus Tech's [Windows Utility](https://github.com/Chri
 - The tray icon follows a light or dark taskbar.
 - Radiance starts in the tray with Windows; closing the window sends it back to the tray.
 
-## Download and build
+## Download
+
+Get **Radiance.exe** from the [latest release](https://github.com/mstlvc/Radiance/releases/latest):
+a single file with nothing to install, for Windows 10 or 11 (64-bit).
+
+## Build
 
 Radiance builds to a single `Radiance.exe` (static runtime, everything embedded).
 
@@ -189,8 +222,8 @@ src/
   ui/         theme tokens, fonts, icons, widgets, backdrop, shell, quick popup
   ui/pages/   Display, Resolution, Monitor, Profiles, Utilities, Settings
 res/          icons, manifest, version info, Lexend fonts, scene-look thumbnails
-tools/        make_icon.py, which draws the icons from the app's logo
-docs/         screenshots
+tools/        make_icon.py, which draws the icons and the README logo from the app's mark
+docs/         screenshots and the README logo
 third_party/  Dear ImGui 1.90 (with the changes below) and FreeType
 ```
 
